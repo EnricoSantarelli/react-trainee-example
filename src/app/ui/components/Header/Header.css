@@ -3,7 +3,7 @@
     position: absolute;
     z-index: 1;
     top: 0;
-    background-color: var(--black-opacity)
+    background-color: var(--black-opacity);
 }
 
 .nav {
@@ -19,6 +19,7 @@
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
     transition: 0.2s ease-in-out;
 }
 

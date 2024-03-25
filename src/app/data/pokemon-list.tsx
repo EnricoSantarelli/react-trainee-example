@@ -1,6 +1,6 @@
 import { PokemonType } from "../types/PokemonType";
 
-export const pokemons: PokemonType[] = [
+export const pokemonList: PokemonType[] = [
     {
         id: 1,
         name: "bulbasaur",

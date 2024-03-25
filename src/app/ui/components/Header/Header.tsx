@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom"
 import "./Header.css"
 
 export default function Header() {
     return (
         <header className="header">
             <ul className="nav">
-                <li className="nav__item">Home</li>
-                <li className="nav__item">Pokémons</li>
-                <li className="nav__item">Cadastrar</li>
+                <Link className="nav__item" to={"/"}>Home</Link>
+                <Link className="nav__item" to={"/pokemons"}>Pokémons</Link>
+                <Link className="nav__item" to={"/register"}>Cadastrar</Link>
             </ul>
         </header>
     )

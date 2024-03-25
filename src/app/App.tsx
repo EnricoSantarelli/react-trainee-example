@@ -1,12 +1,13 @@
-import PokemonPage from './pages/PokemonsPage/PokemonPage'
-import Header from './ui/components/Header/Header'
+import AppRouter from './AppRouter'
+import { PokemonsProvider } from './contexts/pokemons-context'
 
 function App() {
   return (
-    <div className='app_container'>
-      <Header />
-      <PokemonPage />
-    </div>
+    <PokemonsProvider>
+      <div className='app_container'>
+        <AppRouter />
+      </div >
+    </PokemonsProvider>
   )
 }
 

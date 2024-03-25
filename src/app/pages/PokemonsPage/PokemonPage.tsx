@@ -1,8 +1,11 @@
-import { pokemons } from "../../data/pokemons"
+import { useContext } from "react"
+import { PokemonsContext } from "../../contexts/pokemons-context"
 import "./PokemonPage.css"
 import PokemonCard from "./components/PokemonCard/PokemonCard"
 
 export default function PokemonPage() {
+    const { pokemons } = useContext(PokemonsContext)
+
     return (
         <main className="pokemon_page">
             {
