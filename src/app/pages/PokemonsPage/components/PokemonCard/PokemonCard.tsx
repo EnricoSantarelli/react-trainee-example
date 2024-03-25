@@ -28,8 +28,10 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
                 return "brown"
             case "ice":
                 return "aliceblue"
+            case "dragon":
+                return "darkgreen"
             default:
-                return "blue"
+                return "pink"
         }
     }
 
