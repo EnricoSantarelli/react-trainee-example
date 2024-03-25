@@ -5,11 +5,13 @@ import { pokemonList } from "../data/pokemon-list"
 type PokemonsContexType = {
     pokemons: PokemonType[],
     addPokemon(hp: number, id: number, image: string, name: string, type: string): void
+    updatePokemon(hp: number, id: number, image: string, name: string, type: string): void
 }
 
 const defaultPokemonsContextType: PokemonsContexType = {
     pokemons: [],
-    addPokemon: () => { }
+    addPokemon: () => { },
+    updatePokemon: () => { }
 }
 
 export const PokemonsContext = createContext<PokemonsContexType>(defaultPokemonsContextType)
@@ -28,8 +30,20 @@ export const PokemonsProvider = ({ children }: { children: ReactNode }) => {
         setPokemons((previousPokemons) => [...previousPokemons, pokemon])
     }
 
+    function updatePokemon(hp: number, id: number, image: string, name: string, type: string) {
+        setPokemons((previousPokemons) => previousPokemons.map((pokemon) => {
+            if (pokemon.id == id) {
+                pokemon.hp = hp
+                pokemon.image = image
+                pokemon.name = name
+                pokemon.type = type
+            }
+            return pokemon
+        }))
+    }
+
     return (
-        <PokemonsContext.Provider value={{ pokemons, addPokemon }}>
+        <PokemonsContext.Provider value={{ pokemons, addPokemon, updatePokemon }}>
             {children}
         </PokemonsContext.Provider>
     )

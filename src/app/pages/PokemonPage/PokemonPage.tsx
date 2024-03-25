@@ -1,6 +1,6 @@
 import { FormEvent, useContext, useState } from "react";
 import { PokemonsContext } from "../../contexts/pokemons-context";
-import { useParams } from "react-router";
+import { redirect, useParams } from "react-router";
 
 export default function PokemonPage() {
 
@@ -11,7 +11,7 @@ export default function PokemonPage() {
     const pokemon = pokemons.find((pokemon) => pokemon.id == parsedId)
 
 
-    const [id, ] = useState<number>(pokemon!.id);
+    const [id,] = useState<number>(pokemon!.id);
     const [name, setName] = useState<string>(pokemon!.name);
     const [type, setType] = useState<string>(pokemon!.type);
     const [image, setImage] = useState<string>(pokemon!.image);
@@ -21,7 +21,8 @@ export default function PokemonPage() {
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         updatePokemon(hp!, id!, image!, name!, type!)
-        alert("Pokémon registrado")
+        alert("Pokémon atualizado")
+        redirect("/pokemons")
     }
 
     return (
@@ -38,7 +39,7 @@ export default function PokemonPage() {
                 <label className="label" htmlFor="hp">HP:</label>
                 <input className="input" type="number" name="hp" value={hp} onChange={(event) => setHp(parseInt(event.target.value))} required />
 
-                <button className="btn" type="submit" >Cadastrar Pokémon</button>
+                <button className="btn" type="submit" >Atualizar Pokémon</button>
             </form>
         </main>
     )

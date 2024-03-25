@@ -4,6 +4,10 @@
     border-radius: 10px;
     width: fit-content;
     width: 300px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+    color: black;
 }
 
 .top_infos {
@@ -54,4 +58,8 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
+}
+
+.pokemon_card:hover {
+    opacity: 0.5;
 }

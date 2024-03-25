@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { PokemonType } from "../../../../types/PokemonType"
 import "./PokemonCard.css"
 
@@ -33,7 +34,7 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
     }
 
     return (
-        <div className="pokemon_card" style={{ borderColor: handleCardColor(pokemon.type) }}>
+        <Link to={`/pokemon/${pokemon.id}`} className="pokemon_card" style={{ borderColor: handleCardColor(pokemon.type) }}>
             <div className="top_infos" style={{ backgroundColor: handleCardColor(pokemon.type) }}>
                 <img src={pokemon.image} alt="Imagem do pokémon" className="img--small" />
                 <p className="name">{pokemon.name}</p>
@@ -53,6 +54,6 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
                     <p className="text--right">{pokemon.type}</p>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
