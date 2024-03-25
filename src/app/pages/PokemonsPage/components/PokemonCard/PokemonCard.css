@@ -51,7 +51,6 @@
 .bottom_infos {
     display: flex;
     align-items: center;
-    background-color: var(--yellow);
     padding: 10px;
     display: flex;
     justify-content: space-between;
