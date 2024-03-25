@@ -1,0 +1,14 @@
+.home_page {
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 10rem;
+    letter-spacing: 20px;
+}
