@@ -3,6 +3,7 @@
     border: 6px solid var(--yellow);
     border-radius: 10px;
     width: fit-content;
+    width: 300px;
 }
 
 .top_infos {
@@ -32,7 +33,7 @@
     font-weight: bold;
     text-transform: capitalize;
     margin-left: 10px;
-    margin-right: 40px;
+    margin-right: auto;
     font-size: 20px;
 }
 

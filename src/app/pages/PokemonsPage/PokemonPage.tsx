@@ -5,7 +5,9 @@ import PokemonCard from "./components/PokemonCard/PokemonCard"
 export default function PokemonPage() {
     return (
         <main className="pokemon_page">
-            <PokemonCard pokemon={pokemons[0]} />
+            {
+                pokemons.map((pokemon) => <PokemonCard pokemon={pokemon} key={pokemon.id} />)
+            }
         </main>
     )
 }
