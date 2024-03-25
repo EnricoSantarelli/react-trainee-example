@@ -1,6 +1,12 @@
+import { useEffect } from 'react'
 import './HomePage.css'
 
 export default function HomePage() {
+
+    useEffect(() => {
+        alert("Bem-vindo ao PokéSite")
+    }, [])
+
     return (
         <main className="home_page">
             <h1 className="title">POKÉ</h1>
