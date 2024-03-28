@@ -11,7 +11,7 @@ export default function PokemonPage() {
     const pokemon = pokemons.find((pokemon) => pokemon.id == parsedId)
 
 
-    const [id,] = useState<number>(pokemon!.id);
+    const [id, setId] = useState<number>(pokemon!.id);
     const [name, setName] = useState<string>(pokemon!.name);
     const [type, setType] = useState<string>(pokemon!.type);
     const [image, setImage] = useState<string>(pokemon!.image);
@@ -22,7 +22,6 @@ export default function PokemonPage() {
         event.preventDefault()
         updatePokemon(hp!, id!, image!, name!, type!)
         alert("Pokémon atualizado")
-        redirect("/pokemons")
     }
 
     return (
